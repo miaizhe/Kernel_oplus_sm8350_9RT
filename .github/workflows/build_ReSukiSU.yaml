@@ -120,8 +120,8 @@ jobs:
       - name: Upload Flashable Kernel
         uses: actions/upload-artifact@v6
         with:
-          name: ReSukiSU_Reno10_Flashable
-          path: ReSukiSU-Reno10-Kernel.zip
+          name: ReSukiSU_9RT_Flashable
+          path: ReSukiSU-9RT-${{ env.BUILD_DATE }}.zip
 
       - name: Upload Release
         uses: softprops/action-gh-release@v2
@@ -135,7 +135,7 @@ jobs:
             - 欢迎刷入芜夕wuxi的内核！祝你玩的愉快！
             - 文件：zip为ak3包，img文件为打包好的镜像
           files: |
-              ReSukiSU-Reno10-${{ env.BUILD_DATE }}.zip
-              boot-ReSukiSU-Reno10-${{ env.BUILD_DATE }}.img
+              ReSukiSU-9RT-${{ env.BUILD_DATE }}.zip
+              boot-ReSukiSU-9RT-${{ env.BUILD_DATE }}.img
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
